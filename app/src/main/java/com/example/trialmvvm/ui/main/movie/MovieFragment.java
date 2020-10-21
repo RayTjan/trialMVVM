@@ -61,15 +61,6 @@ public class MovieFragment extends Fragment {
     private MovieViewModel viewModel;
     Dialog dialog;
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        dialog = Glovar.loadingDialog(getActivity());
-        dialog.show();
-        Log.d("IM IN MOVIE","WHY SO BLACK");
-
-    }
-
     ArrayList<Movie> listMovie;
     Movie movie;
     MovieAdapter movieAdapter;
@@ -92,7 +83,8 @@ public class MovieFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this, view);
-
+        dialog = Glovar.loadingDialog(getActivity());
+        dialog.show();
         Objects.requireNonNull(((MainActivity) requireActivity()).getSupportActionBar()).setLogo(R.drawable.ic_baseline_movie_black);
 
 

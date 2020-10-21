@@ -45,13 +45,6 @@ public class TvShowFragment extends Fragment {
     TvShowAdapter tvShowAdapter;
     Dialog dialog;
 
-    public void onStart() {
-        super.onStart();
-        dialog = Glovar.loadingDialog(getActivity());
-        dialog.show();
-        Log.d("IM IN TVSHOW","WHY SO BLACK");
-
-    }
     public TvShowFragment() {
         // Required empty public constructor
     }
@@ -67,6 +60,8 @@ public class TvShowFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ButterKnife.bind(this,view);
+        dialog = Glovar.loadingDialog(getActivity());
+        dialog.show();
         Objects.requireNonNull(((MainActivity) requireActivity()).getSupportActionBar()).setLogo(R.drawable.ic_baseline_live_tv_black);
 
         listTvShow = new ArrayList<TvShow>();
