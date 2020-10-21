@@ -153,7 +153,7 @@ public class DetailFragment extends Fragment {
                         dialog.cancel();
 
                     }
-                }, 700);
+                }, 500);
             });
         } else {
             popularity.setText(tvShow.getPopularity());
@@ -193,7 +193,7 @@ public class DetailFragment extends Fragment {
                         dialog.cancel();
 
                     }
-                }, 700);
+                }, 500);
             });
 
 
