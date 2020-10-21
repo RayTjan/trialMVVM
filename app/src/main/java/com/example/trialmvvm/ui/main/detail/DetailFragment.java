@@ -147,6 +147,13 @@ public class DetailFragment extends Fragment {
                     adapter.notifyDataSetChanged();
                     rvCast.setAdapter(adapter);
                 }
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.cancel();
+
+                    }
+                }, 700);
             });
         } else {
             popularity.setText(tvShow.getPopularity());
@@ -180,16 +187,18 @@ public class DetailFragment extends Fragment {
                     adapter.notifyDataSetChanged();
                     rvCast.setAdapter(adapter);
                 }
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.cancel();
+
+                    }
+                }, 700);
             });
 
-        }
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dialog.cancel();
 
-            }
-        }, 700);
+        }
+
 
     }
 

@@ -77,7 +77,6 @@ public class TvShowAdapter extends RecyclerView.Adapter<TvShowAdapter.CardViewVi
     class CardViewViewHolder extends RecyclerView.ViewHolder {
         TextView popularity, name, first_air_date,rating;
         ImageView cover;
-
         CardViewViewHolder(View itemView) {
             super(itemView);
             popularity = itemView.findViewById(R.id.textView_adapterPopularity);

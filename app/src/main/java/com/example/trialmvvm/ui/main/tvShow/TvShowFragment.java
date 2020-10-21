@@ -90,14 +90,14 @@ public class TvShowFragment extends Fragment {
                 tvShowAdapter.setTvShowList(tvShows);
                 tvShowAdapter.notifyDataSetChanged();
                 rvTvShow.setAdapter(tvShowAdapter);
-
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.cancel();
+                    }
+                }, 100);
             }
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    dialog.cancel();
-                }
-            }, 200);
+
         }
     };
 }

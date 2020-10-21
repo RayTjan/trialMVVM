@@ -167,14 +167,14 @@ public class MovieFragment extends Fragment {
                 movieAdapter.setMovieList(movies);
                 movieAdapter.notifyDataSetChanged();
                 rvMovie.setAdapter(movieAdapter);
-
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.cancel();
+                    }
+                }, 100);
             }
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    dialog.cancel();
-                }
-            }, 200);
+
 
         }
     };
